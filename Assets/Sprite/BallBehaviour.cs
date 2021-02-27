@@ -43,6 +43,12 @@ public class BallBehaviour : MonoBehaviour
                 player.playerColorNum = 2;
             }
 
+            if (BallColorNum == 3)
+            {
+                player.GetComponent<Renderer>().material.color = colors[3];
+                player.playerColorNum = 3;
+            }
+
 
 
             Destroy(gameObject);
