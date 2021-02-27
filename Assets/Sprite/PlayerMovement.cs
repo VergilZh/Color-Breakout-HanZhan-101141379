@@ -7,13 +7,13 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public float forwardForce = 20f;
     public float sidewayForce = 200f;
-    public int playerColorNum = 1;
+    public int playerColorNum;
 
     // Start is called before the first frame update
     void Start()
     {
         rb.AddForce(0, 200, 500);
-        playerColorNum = 1;
+        playerColorNum = 0;
     }
 
     // Update is called once per frame
@@ -34,12 +34,6 @@ public class PlayerMovement : MonoBehaviour
         if (rb.position.y < -1)
         {
             FindObjectOfType<GameManager>().EndGame();
-        }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            GetComponent<Renderer>().material.color = Color.blue;
-            playerColorNum = 2;
         }
 
     }

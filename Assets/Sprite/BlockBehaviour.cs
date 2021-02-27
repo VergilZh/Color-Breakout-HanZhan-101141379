@@ -7,8 +7,9 @@ public class BlockBehaviour : MonoBehaviour
     public PlayerMovement movement;
     public GameManager GameManager;
     public int blockColorNum;
-    public int currentPlayerColor;
+    private int currentPlayerColor;
     public PlayerMovement player;
+    public ParticleSystem Explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class BlockBehaviour : MonoBehaviour
             if (currentPlayerColor == blockColorNum)
             {
                 Destroy(gameObject);
+                Instantiate(Explosion, gameObject.transform.position, Quaternion.identity);
             }
             else
             {
