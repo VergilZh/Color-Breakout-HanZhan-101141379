@@ -10,6 +10,7 @@ public class BlockBehaviour : MonoBehaviour
     private int currentPlayerColor;
     public PlayerMovement player;
     public ParticleSystem Explosion;
+    public AudioSource Pop;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class BlockBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
                 Instantiate(Explosion, gameObject.transform.position, Quaternion.identity);
+                Instantiate(Pop, gameObject.transform.position, Quaternion.identity);
             }
             else
             {

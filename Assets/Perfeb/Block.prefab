@@ -131,3 +131,4 @@ MonoBehaviour:
   player: {fileID: 0}
   Explosion: {fileID: 8422039308693955817, guid: 438162e2814305f43bdbfe67964d76fa,
     type: 3}
+  Pop: {fileID: 8584733329176882100, guid: 2a1e96d09efd81347a767273123024cf, type: 3}

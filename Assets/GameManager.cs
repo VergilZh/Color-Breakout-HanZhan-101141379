@@ -8,10 +8,23 @@ public class GameManager : MonoBehaviour
     public float RestartDelay = 1f;
 
     public GameObject CompleteLevelUI;
+    public GameObject PauseUI;
 
     public void CompleteLevel()
     {
         CompleteLevelUI.SetActive(true);
+    }
+
+    public void Pause()
+    {
+        PauseUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Resume()
+    {
+        PauseUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void EndGame()
